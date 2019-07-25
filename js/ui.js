@@ -35,4 +35,19 @@ class UI {
             document.querySelector('.messages div').remove();
         },3000)
     }
+
+    // NEED TO MODIFY FROM API
+    displayResult(result, currency) {
+        let currencyName;
+        currencyName = 'price' + currency.toLowerCase();
+        const Value = result[currencyName];
+
+        this.showSpinner();
+    }
+
+    showSpinner() {
+        const spinnerGIF = doc.createElement('img');
+        spinnerGIF.src = './img/spinner.gif'
+        document.querySelector('.spinner').appendChild(spinnerGIF);
+    }
 }

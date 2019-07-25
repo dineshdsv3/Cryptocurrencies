@@ -2,6 +2,7 @@ class CryptoAPI {
 
 
     // getting all crypto currencies
+    // HERE JUST I GOT THE ICO's list need to update the list of crypto currencies
     async getCryptoCurrenciesList() {
         console.log("getting crypto currency list");
         const url = await fetch('https://ICOWatchListraygorodskijV1.p.rapidapi.com/getAllICOs', {
@@ -20,6 +21,16 @@ class CryptoAPI {
 
 
     }
+
+    async queryAPI(currency, crypto) {
+        const result = await fetch(`https://api.cryptonator.com/api/full/${crypto}-${currency}`);
+
+        const convert = await result.json();
+
+        return {convert};
+    }
+
+
 }
 
 // fetch('https://ICOWatchListraygorodskijV1.p.rapidapi.com/getAllICOs', {
