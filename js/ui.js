@@ -11,7 +11,7 @@ class UI {
                 let currencies = data.data;
                 console.log(currencies);
                 currencies.forEach((currency, ind) => {
-                    if (ind < 10) {
+                    if (ind < 100) {
                         const select = document.getElementById('cryptocurrency');
                         const option = document.createElement('option');
                         option.value = currency.symbol;
