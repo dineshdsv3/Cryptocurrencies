@@ -17,9 +17,7 @@ form.addEventListener('submit', (e) => {
        cryptoAPI.queryAPI(currency,crypto)
        .then((data) => {
           console.log(data.ticker)
-          let price = data.ticker.price;
-          let crypt = data.ticker.base;
-          ui.displayResult(price,currency,crypt);
+          ui.displayResult(data.ticker);
        })
     }
 })
