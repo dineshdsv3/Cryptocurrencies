@@ -16,7 +16,14 @@ form.addEventListener('submit', (e) => {
     }else{
        cryptoAPI.queryAPI(currency,crypto)
        .then((data) => {
-           ui.displayResult(data.result[0]);
+          console.log(data.ticker)
+          let price = data.ticker.price;
+          let crypt = data.ticker.base;
+          ui.displayResult(price,currency,crypt);
        })
     }
 })
+
+
+
+// 1BTC = 9732USD
