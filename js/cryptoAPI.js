@@ -2,7 +2,7 @@ class CryptoAPI {
 
 
     // getting all crypto currencies
-    // HERE JUST I GOT THE ICO's list need to update the list of crypto currencies
+    // Updated the list of crypto currencies
     async getCryptoCurrenciesList() {
         console.log("getting crypto currency list");
         const url = await fetch('https://l4chsalter-alternative-me-crypto-v1.p.rapidapi.com/v2/listings/', {

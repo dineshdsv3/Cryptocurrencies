@@ -10,9 +10,10 @@ class UI {
             .then((data) => {
                 let currencies = data.data;
                 console.log(currencies);
+                const select = document.getElementById('cryptocurrency');
                 currencies.forEach((currency, ind) => {
                     if (ind < 100) {
-                        const select = document.getElementById('cryptocurrency');
+                       
                         const option = document.createElement('option');
                         option.value = currency.symbol;
                         option.appendChild(document.createTextNode(currency.name));
@@ -23,6 +24,7 @@ class UI {
                 console.log("adding crypto done");
             });
     }
+    
 
     printMessage(message, className) {
         const div = document.createElement('div');
