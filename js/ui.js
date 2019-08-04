@@ -73,7 +73,7 @@ class UI {
 
     showSpinner() {
         const spinnerGIF = document.createElement('img');
-        spinnerGIF.src = './img/spinner.gif'
+        spinnerGIF.src = './spinner.gif'
         document.querySelector('.spinner').appendChild(spinnerGIF);
     }
 }
